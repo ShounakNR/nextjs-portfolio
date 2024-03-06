@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/app/components/navbar";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     template: '%s | Shounak Rangwala'
   },
   description: "Full-Stack Developer Transforming Ideas into Digital Reality",
+  metadataBase: new URL("http://localhost:3000"),
   openGraph:{
     title: 'Shounak Rangwala',
     description: 'Full-Stack Developer Transforming Ideas into Digital Reality',
