@@ -26,18 +26,18 @@ const navItems = [
 export function NavLinks() {
   const pathName = usePathname()
   return (
-    <div className="flex float-right">
+    <div className="flex flex-col float-center w-1/2 mt-16 ">
       {navItems.map((link) => {
         const activeClass = clsx(
-          {'text-blue-600': pathName === link.route}
+          {'text-sky-800': pathName === link.route}
         )
         return (
           <Link
             key={link.name}
             href={link.route}
-            className={`h-[48px] gap-10 rounded-md p-5 text-sm font-medium hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3 ${activeClass}`}
+            className={"p-2 text-sm font-medium justify-start text-sky-100"}
           >
-            <p className="hidden md:block font-serif text-xl">{link.name}</p>
+            <span className={`hidden md:block font-serif text-m hover:text-sky-600 focus ${activeClass} uppercase`}>{link.name}</span>
           </Link>
         );
       })}

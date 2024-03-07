@@ -1,7 +1,7 @@
 export default function Work(){
   return(
-    <p className="flex min-h-screen flex-col items-center justify-between p-24">
-      Work
-    </p>
+    <div className="p-4">
+      <p>Work</p>
+    </div>
   )
 }
