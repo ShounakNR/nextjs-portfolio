@@ -12,7 +12,7 @@ export function Navbar() {
           className="rounded-md p-4"
           href="/"
         >
-          <h1 className="text-4xl font-bold tracking-tight text-slate-200 text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-200">
             Shounak Rangwala
           </h1>
         </Link>
