@@ -29,7 +29,7 @@ export function NavLinks() {
     <div className="flex flex-col float-center w-1/2 mt-16 ">
       {navItems.map((link) => {
         const activeClass = clsx(
-          {'text-sky-800': pathName === link.route}
+          {'text-teal-600': pathName === link.route}
         )
         return (
           <Link
@@ -37,7 +37,7 @@ export function NavLinks() {
             href={link.route}
             className={"p-2 text-sm font-medium justify-start text-sky-100"}
           >
-            <span className={`hidden md:block font-serif text-m hover:text-sky-600 focus ${activeClass} uppercase`}>{link.name}</span>
+            <span className={`hidden md:block font-serif text-m hover:text-cyan-500 focus ${activeClass} uppercase`}>{link.name}</span>
           </Link>
         );
       })}

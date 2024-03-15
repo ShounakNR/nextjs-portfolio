@@ -17,6 +17,7 @@ export interface SkillsInfo  {
 }
 
 export interface CardData {
+  sidebar: string,
   header: string,
   body: string,
   link: string | undefined,
