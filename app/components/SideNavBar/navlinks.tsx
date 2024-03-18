@@ -19,6 +19,11 @@ const navItems = [
   {
     name: 'Education',
     route: '/education'
+  },
+  {
+    name: 'Resume',
+    route: 'https://drive.google.com/file/d/1_H502tsmUYnOAGvqD2nR6PTszCdVWd_2/view?usp=sharing',
+    target: '_blank'
   }
 ]
 
@@ -36,6 +41,7 @@ export function NavLinks() {
             key={link.name}
             href={link.route}
             className={"p-2 text-sm font-medium justify-start text-sky-100"}
+            target={link?.target}
           >
             <span className={`hidden md:block font-serif text-m hover:text-cyan-500 focus ${activeClass} uppercase`}>{link.name}</span>
           </Link>
