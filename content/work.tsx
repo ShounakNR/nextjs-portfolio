@@ -1,4 +1,4 @@
-export const work = [
+const work = [
   {
     sidebar: 'Jun 2021 - Present',
     header: 'Software Engineer · ProDIGIQ Inc.',
@@ -85,3 +85,5 @@ export const work = [
     }
   },
 ]
+
+export default JSON.stringify(work)

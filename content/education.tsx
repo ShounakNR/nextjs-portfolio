@@ -1,9 +1,8 @@
-export const educations = [
+const educations = [
   {
     sidebar: 'Aug 2019 - May 2021',
     header: 'Rutgers - State University of New Jersey',
     body:'Master of Science - MS, Computer Engineeing',
-    link: undefined,
     additional_links:{
       links:
       [
@@ -39,7 +38,6 @@ export const educations = [
     sidebar: 'Aug 2015 - May 2019',
     header: 'Birla Institute of Technology and Science - Goa Campus',
     body:'Bachelor of Eningeering - BE, Electrical and Electronics Engineering',
-    link: undefined,
     skills: {
       skills:
         [
@@ -54,5 +52,6 @@ export const educations = [
         ]
     }
   },
-
 ]
+
+export default JSON.stringify(educations)

@@ -10,15 +10,18 @@ const navItems = [
   },
   {
     name: 'Work',
-    route: '/work'
+    route: '/work',
+    file: 'work'
   },
   {
     name: 'Projects',
-    route: '/projects'
+    route: '/projects',
+    file: 'projects'
   },
   {
     name: 'Education',
-    route: '/education'
+    route: '/education',
+    file: 'education'
   },
   {
     name: 'Resume',
@@ -30,6 +33,11 @@ const navItems = [
 
 export function NavLinks() {
   const pathName = usePathname()
+  const createQueryString = ((name: string, value: string | undefined)=>{
+    const params = new URLSearchParams()
+    params.set(name, value || '')
+    return params.toString()
+  })
   return (
     <div className="flex flex-col float-center w-1/2 mt-16 ">
       {navItems.map((link) => {
@@ -39,7 +47,8 @@ export function NavLinks() {
         return (
           <Link
             key={link.name}
-            href={link.route}
+            href={link.route + '?' + createQueryString('file', link.file)}
+            // as={link.route}
             className={"p-2 text-sm font-medium justify-start text-sky-100"}
             target={link?.target}
           >
